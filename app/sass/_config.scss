@@ -1,0 +1,33 @@
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import 'node_modules/slick-slider/slick/slick.scss';
+
+// USER VARIABLES SECTION
+$accent: #ee7246; // Accent Color
+$black: #000;
+$white: #fff;
+$fontsize: 16px; // Body Font Size
+$textcolor: #000; // Text Color
+$mainfamily: DINPro; // Main Font Family
+$base-duration: 0.15s;
+$base-timing: ease-in-out;
+$maxWidth: 1140px;
+$contentPadding: 20px;
+
+// FONTS LOAD SECTION
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    font-display: swap;
+    src: url($f-url + '.woff2') format('woff2');
+    src: url($f-url + '.woff') format('woff');
+  }
+}
+
+@include font('DINPro', normal, 900, '../fonts/DINPro-Black');
+@include font('DINPro', normal, 300, '../fonts/DINPro-Light');
+@include font('DINPro', normal, 700, '../fonts/DINPro-Bold');
+@include font('DINPro', normal, 500, '../fonts/DINPro-Medium');
+@include font('DINPro', normal, 400, '../fonts/DINPro');
